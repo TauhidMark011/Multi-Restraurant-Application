@@ -5,10 +5,6 @@ First, type in your address (there are only a few examples listed, such as Emali
 
 ## GetTheFood - Preview
 ![](ghPreview/1.png)
-![](ghPreview/2.png)
-![](ghPreview/3.png)
-![](ghPreview/4.png)
-![](ghPreview/5.png)
 
 ## Technologies:
 | Tool | Description |
