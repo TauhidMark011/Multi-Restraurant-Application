@@ -1,0 +1,32 @@
+.deliveryRating {
+    &__text {
+        margin-bottom: 5px;
+    }
+
+    .stars {
+        display: inline-block;
+       
+        &__item {
+            float: right;
+            color: #ddd;
+            padding: 10px 5px;
+            cursor: pointer;
+
+            &__active{
+                color:$color4;
+            }
+
+            .fa{
+                pointer-events: none;
+            }
+        }
+
+        &__item:hover,
+        &__item:hover ~ li {
+            color: $color4;
+        }
+    }
+
+    margin-bottom: 20px;
+
+}

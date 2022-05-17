@@ -1,0 +1,67 @@
+.oneRestaurantCart {
+    position: sticky;
+    top: 70px;
+    margin-left: 25px;
+    width: 25%;
+    font-size: 1.5rem;
+    text-align: center;
+
+    @include phone {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        z-index: 99999999;
+        overflow-y: scroll;
+        max-height: 100vh;
+        width: 100%;
+        background: $color1;
+        display: none;
+        z-index: 999999;
+
+        &--isHide {
+            display: block;
+        }
+    }
+
+    @include tablet{
+        width: 30%;
+    }
+
+    &__header {
+        font-weight: 700;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid darken($color6,5%);
+
+        @include phone {
+            margin-top: 50px;
+        }
+    }
+
+    &__close {
+        display: none;
+
+        @include phone {
+            display: block;
+            position: absolute;
+            top: 2%;
+            right: 5%;
+            font-size: 2rem;
+            z-index: 99999999;
+        }
+    }
+
+    .emptyBasket {
+        margin: 50px 0;
+
+        .fas {
+            margin-top: 25px;
+            font-size: 8rem;
+            color: darken($color6,5%);
+        }
+    }
+}

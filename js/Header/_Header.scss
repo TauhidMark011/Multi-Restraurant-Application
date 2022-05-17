@@ -1,0 +1,175 @@
+.header {
+    background-color: rgba($color: $color2, $alpha: 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    width: 100%;
+    z-index: 9999;
+    transition: .3s ease-in;
+
+    &__hide {
+        top: -70px;
+    }
+
+    &:hover {
+        background: rgba($color: $color2, $alpha: 0.6);
+    }
+}
+
+.nav {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color1;
+
+    @include phone {
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 20%;
+        font-family: $font-logo;
+        font-size: 2.2rem;
+        color: $color1;
+
+        @include phone {
+            width: auto;
+            font-size: 2rem;
+        }
+
+        &__text {
+            display: inline-flex;
+            align-items: center;
+            transition: 0.2s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            .fas {
+                @include phone {
+                    font-size: 1.2rem;
+                }
+
+                font-size: 1.5rem;
+                margin-left: 5px;
+            }
+
+            &--color-one {
+                color: $color3;
+            }
+
+            &--color-two {
+                color: $color4;
+            }
+        }
+    }
+
+    &__address {
+        width: 60%;
+        text-align: center;
+
+        @include phone {
+            display: none;
+        }
+
+        &__notAllowed {
+            cursor: not-allowed !important;
+        }
+
+        &__text {
+            cursor: pointer;
+            display: inline;
+            font-size: 1.5rem;
+        }
+
+    }
+
+    &__address__mobile {
+        display: none;
+
+        @include phone {
+            display: block;
+            font-size: 1.5rem;
+
+            &__text {
+                font-size: 1rem;
+                border-bottom: 1px solid $color1;
+                padding-bottom: 2px;
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &__empty {
+        @include phone {
+            display: none;
+        }
+
+        font-size: 1.5rem;
+        width: 20%;
+        text-align: end;
+    }
+}
+
+.searchBarAddress__container {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(5px);
+    background-color: rgba($color: $color2, $alpha: 0.5);
+
+    @include phone {
+        left: 0;
+        right: 0;
+        transform: none;
+        width: 100vw;
+    }
+
+    .searchBarAddress {
+        margin-top: 50px;
+        border-radius: 25px;
+        height: 50vh;
+        background-color: $color1;
+        position: relative;
+
+        @include phone {
+            width: 95%;
+        }
+
+        &__close {
+            position: absolute;
+            right: 2%;
+            top: 2%;
+            font-size: 2rem;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .searchPlace__form {
+            width: 100%;
+        }
+
+        .searchPlace__form__input {
+            @include phone {
+                min-width: 100px;
+
+                &::placeholder {
+                    font-size: 0.8rem;
+                }
+            }
+
+            width: 100%;
+            border-radius: 25px 25px 0 0;
+        }
+    }
+}

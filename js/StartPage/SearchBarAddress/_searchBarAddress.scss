@@ -1,0 +1,62 @@
+.searchPlace__form {
+    position: relative;
+    height: 50px;
+
+    @include phone {
+        width: 95%;
+        margin-bottom: 250px;
+    }
+
+    &__input {
+        font-size: 1rem;
+        padding: 15px 40px;
+        border: none;
+        min-width: 500px;
+        border-radius: 50px;
+        height: 50px;
+
+        &::placeholder {
+            color: $color5;
+
+            @include phone {
+                font-size: 0.8rem;
+            }
+        }
+
+        @include phone {
+            min-width: 200px;
+            width: 100%;
+        }
+
+        &--active {
+            border-radius: 25px 25px 0 0;
+        }
+    }
+
+    &__icon {
+        height: 50px;
+        position: absolute;
+        left: 3%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        color: $color5;
+    }
+}
+
+.searchPlace__addressList {
+    background-color: $color1;
+    border-radius: 0 0 25px 25px;
+    overflow: hidden;
+
+    &__item {
+        text-align: center;
+        padding: 7px;
+        cursor: pointer;
+
+        &:hover {
+            background: $color6;
+        }
+    }
+}

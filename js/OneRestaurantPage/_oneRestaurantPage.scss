@@ -1,0 +1,77 @@
+.oneRestaurant__main {
+    min-height: 100vh;
+    width: 100%;
+
+    @include phone{
+        .currentPage{
+            margin-top: 80px;
+        }
+    }
+
+    .basket__mobileBtn{
+        display: none;
+
+        @include phone{
+            display: block;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 15px;
+            text-align: center;
+            background: $color2;
+            color: $color1;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.oneRestaurant__container {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    min-height: 50vh;
+
+    @include phone{
+        margin-top: 25px;
+    }
+
+    .oneRestaurantMenu {
+        width: 75%;
+        @include phone{
+            width: 100%;
+        }
+
+        @include tablet{
+            width: 70%;
+        }
+    }
+
+    .dishOrder {
+        margin-top: 20px;
+        background-color: $color2;
+        color: white;
+        font-weight: 500;
+        font-size: 1.4rem;
+        width: 100%;
+        padding: 15px;
+        border-radius: 5px;
+
+        &:disabled,
+        &[disabled] {
+            cursor: not-allowed;
+        }
+
+        @include phone{
+            width: 95%;
+            margin-bottom: 10px;
+        }
+    }
+
+   
+}
+
+
+

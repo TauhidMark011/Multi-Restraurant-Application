@@ -1,0 +1,13 @@
+.openNow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include phone{
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        margin-right: 15px;
+    }
+}
