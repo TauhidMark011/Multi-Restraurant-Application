@@ -20,9 +20,3 @@ First, type in your address (there are only a few examples listed, such as Emali
 | React Router Dom | DOM bindings for React Router. |
 | React Multi Carousel | Supports multiple items slider. |
 | Webpack | Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. |
-
-## Installation:
-
--  ```git clone https://github.com/oszi91/GetTheFood``` to clone the repository.
--  npm install to install all dependencies
--  npm start and http://localhost:3001/ in the browser to preview the app
